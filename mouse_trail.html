@@ -1,0 +1,14 @@
+<style> .dot {
+  position: absolute; width: 6px; height: 6px;
+  background: red; border-radius: 50%;
+} </style>
+<script>
+document.onmousemove = e => {
+  let dot = document.createElement("div");
+  dot.className = "dot";
+  dot.style.left = e.pageX + "px";
+  dot.style.top = e.pageY + "px";
+  document.body.appendChild(dot);
+  setTimeout(() => dot.remove(), 300);
+};
+</script>
